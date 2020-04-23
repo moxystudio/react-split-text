@@ -1,7 +1,7 @@
 {
-  "name": "@moxy/react-lib-template",
+  "name": "@moxy/react-split-text",
   "version": "0.0.0",
-  "description": "A template that aims to make the implementation of React component packages easier and more methodic.",
+  "description": "A react component that wraps each word of a sentence into a <span> element.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -9,18 +9,20 @@
     "es",
     "dist"
   ],
-  "homepage": "https://github.com/moxystudio/react-lib-template#readme",
-  "author": "Rui Monteiro <rui.monteiro@moxy.studio>",
+  "homepage": "https://github.com/moxystudio/react-split-text#readme",
+  "author": "Diogo Silva <fsdiogo@gmail.com>",
   "license": "MIT",
   "keywords": [
-    "template"
+    "react",
+    "split",
+    "text"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moxystudio/react-lib-template.git"
+    "url": "git+https://github.com/moxystudio/react-split-text.git"
   },
   "bugs": {
-    "url": "https://github.com/moxystudio/react-lib-template/issues"
+    "url": "https://github.com/moxystudio/react-split-text/issues"
   },
   "scripts": {
     "build:css": "rimraf dist && postcss src/styles/**/*.css --base src/styles --dir dist",
