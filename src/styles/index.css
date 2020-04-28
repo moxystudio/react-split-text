@@ -1,9 +1,4 @@
-.next-lib-template_container {
-    background-color: black;
-    color: white;
-
-    &::after {
-        content: '';
-        margin-bottom: 50px;
-    }
-}
+.react-split-text {
+    display: inline-block;
+    white-space: pre-wrap;
+};

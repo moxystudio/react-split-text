@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import '@moxy/react-lib-template/dist/index.css';
+import '@moxy/react-split-text/dist/index.css';
 
 import React from 'react';
 

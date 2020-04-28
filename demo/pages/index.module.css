@@ -1,5 +1,11 @@
 .home {
-    & .newComponent {
-        border: 1px solid red;
+    & .textWrapper {
+        width: 50%;
+        margin-bottom: 10px;
+        border: 1px solid blue;
+
+        & .final {
+            color: blue;
+        }
     }
 }

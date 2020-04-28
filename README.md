@@ -1,58 +1,75 @@
--------
-### ⚠️  PLEASE READ THE [INSTRUCTIONS](/INSTRUCTIONS.md) FOR GUIDELINES ON HOW TO START YOUR PACKAGE.
-> Don't forget to remove this warning while updating this README.
--------
-
-# {package-name}
+# react-split-text
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][build-status-image]][build-status-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
-[npm-url]:https://npmjs.org/package/@moxy/{package-name}
-[downloads-image]:https://img.shields.io/npm/dm/@moxy/{package-name}.svg
-[npm-image]:https://img.shields.io/npm/v/@moxy/{package-name}.svg
-[build-status-url]:https://github.com/moxystudio/{package-name}/actions
-[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/{package-name}/Node%20CI/master
-[codecov-url]:https://codecov.io/gh/moxystudio/{package-name}
-[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/{package-name}/master.svg
-[david-dm-url]:https://david-dm.org/moxystudio/{package-name}
-[david-dm-image]:https://img.shields.io/david/moxystudio/{package-name}.svg
-[david-dm-dev-url]:https://david-dm.org/moxystudio/{package-name}?type=dev
-[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/{package-name}.svg
+[npm-url]:https://npmjs.org/package/@moxy/react-split-text
+[downloads-image]:https://img.shields.io/npm/dm/@moxy/react-split-text.svg
+[npm-image]:https://img.shields.io/npm/v/@moxy/react-split-text.svg
+[build-status-url]:https://github.com/moxystudio/react-split-text/actions
+[build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/react-split-text/Node%20CI/master
+[codecov-url]:https://codecov.io/gh/moxystudio/react-split-text
+[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/react-split-text/master.svg
+[david-dm-url]:https://david-dm.org/moxystudio/react-split-text
+[david-dm-image]:https://img.shields.io/david/moxystudio/react-split-text.svg
+[david-dm-dev-url]:https://david-dm.org/moxystudio/react-split-text?type=dev
+[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/react-split-text.svg
 
-{package-description}
+A react component that wraps each word of a sentence into a `<span>` element.
 
 ## Installation
 
 ```sh
-$ npm install @moxy/{package-name}
+$ npm install @moxy/react-split-text
 ```
 
 This library is written in modern JavaScript and is published in both CommonJS and ES module transpiled variants. If you target older browsers please make sure to transpile accordingly.
 
 ## Motivation
 
-{package-motivation}
+Sometimes there's a need to split a sentence into multiple elements, either to individually animate or simply style them. The `SplitText` component receives a string and splits it (with a [separator](#separator) of your choice) into multiple `<span>`s.
 
 ## Usage
 
-{package-usage-example}
+```js
+import React from 'react';
+import SplitText from '@moxy/react-split-text';
+
+const MyPage = (props) => (
+    <div className="container">
+        <SplitText className="word">Lorem ipsum dolor sit amet.</SplitText>
+    </div>
+);
+
+export default MyPage;
+```
+
+Import the stylesheet in the project's entry JavaScript file:
+
+```js
+import '@moxy/react-split-text/dist/index.css';
+```
 
 ## API
 
-{package-api-description}
+Besides the following supported props by the `SplitText` component, additional props are spread to each child.
 
-#### {package-api-prop-example}
+#### children
 
-Type: `object`
-Required: `true`
+Type: `string` | Required: `true`
 
-The `{package-api-prop-example}` has the following shape:
-```js
-{package-api-prop-example}: PropTypes.shape({
-    foo: PropTypes.string,
-    bar: PropTypes.arrayOf(PropTypes.object),
-}).isRequired,
-```
+Text to be split and rendered inside the component.
+
+#### className
+
+Type: `string` | Required: `false`
+
+A className to apply to each child.
+
+#### separator
+
+Type: `string` | Required: `false` | Default: `non-breaking space`
+
+The pattern describing where each split should occur, just like the one from [String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split).
 
 ## Tests
 
@@ -65,7 +82,7 @@ $ npm test -- --watch # during development
 
 A demo [Next.js](https://nextjs.org/) project is available in the [`/demo`](./demo) folder so you can try out this component.
 
-First, build the `{package-name}` project with:
+First, build the `react-split-text` project with:
 
 ```sh
 $ npm run build
@@ -88,4 +105,4 @@ There is an ongoing [next.js issue](https://github.com/zeit/next.js/issues/10148
 
 ## License
 
-Released under the [MIT License](https://www.opensource.org/licenses/mit-license.php).
+Released under the [MIT License](./LICENSE).

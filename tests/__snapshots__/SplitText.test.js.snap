@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SplitText Component should render correctly 1`] = `
+<DocumentFragment>
+  <span
+    class="react-split-text"
+  >
+    Hello 
+  </span>
+  <span
+    class="react-split-text"
+  >
+    world!
+  </span>
+</DocumentFragment>
+`;
+
+exports[`SplitText Component should render correctly with separator 1`] = `
+<DocumentFragment>
+  <span
+    class="react-split-text"
+  >
+    Hello world!
+  </span>
+</DocumentFragment>
+`;

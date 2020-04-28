@@ -16,7 +16,7 @@
     "export": "next export"
   },
   "dependencies": {
-    "@moxy/react-lib-template": "file:..",
+    "@moxy/react-split-text": "file:..",
     "next": "^9.3.5",
     "onchange": "^6.1.0",
     "react": "^16.12.0",
