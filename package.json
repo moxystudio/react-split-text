@@ -1,6 +1,6 @@
 {
   "name": "@moxy/react-split-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react component that wraps each word of a sentence into a <span> element.",
   "main": "lib/index.js",
   "module": "es/index.js",
